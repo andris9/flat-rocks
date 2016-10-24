@@ -17,7 +17,7 @@ cd rocksdb
 
 make static_lib
 make shared_lib
-make install
+make install -e INSTALL_PATH=/usr
 ```
 
 ## Building and Dependencies
@@ -29,10 +29,6 @@ Run `npm install` to fetch dependencies and compile bindings.
 ## API and Usage
 
 Flat Rocks is API compatible with LevelDOWN. See the [LevelDOWN documentation](https://github.com/Level/leveldown#leveldown) for details.
-
-If flat-rocks does not find the linked library, then LD_LIBRARY_PATH before starting your node app
-
-    exports LD_LIBRARY_PATH=/usr/local/lib
 
 ## Thanks
 

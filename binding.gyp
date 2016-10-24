@@ -5,7 +5,7 @@
                 'cflags': [
                 ], 'cflags!': ['-fno-tree-vrp'],
                 "libraries": [
-                    "/usr/local/lib/librocksdb.so"
+                    "/usr/lib/librocksdb.so"
                 ]
             }], ['OS == "mac"', {
                 'xcode_settings': {
