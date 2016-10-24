@@ -6,6 +6,20 @@ _[Image © Copyright 2016, Facebook](http://rocksdb.org/)_
 
 **Native LevelUP bindings to RocksDB**
 
+## Installing RocksDB
+
+```
+apt-get update
+apt-get -q -y install build-essential python libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev
+
+git clone git://github.com/facebook/rocksdb.git
+cd rocksdb
+
+make static_lib
+make shared_lib
+make install
+```
+
 ## Building and Dependencies
 
 Flat Rocks dynamically links to librocksdb. To build this module, both the RocksDB headers and dynamic library must be in the system's build-path and library-path, respectively.
@@ -15,6 +29,10 @@ Run `npm install` to fetch dependencies and compile bindings.
 ## API and Usage
 
 Flat Rocks is API compatible with LevelDOWN. See the [LevelDOWN documentation](https://github.com/Level/leveldown#leveldown) for details.
+
+If flat-rocks does not find the linked library, then LD_LIBRARY_PATH before starting your node app
+
+    exports LD_LIBRARY_PATH=/usr/local/lib
 
 ## Thanks
 
